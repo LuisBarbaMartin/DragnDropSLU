@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop SLU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <body>
+        <div id="workspace" class="app-container">
+            <!-- dragg boxes are only supposed to appear within these bounds -->
+        </div>
+
+        <div id="addBoxContainer" style="max-width:1100px; margin: 12px auto; display:flex; gap:8px; align-items:center; justify-content:center;">
+            <input id="boxTitle" type="text" placeholder="Enter box title" style="padding:8px; width:300px" />
+            <button id="addBoxBtn" style="padding:8px 12px">Add Box</button>
+            <button id="deleteAllBtn" style="padding:8px 12px">Delete All</button>
+        </div>
+
+        <div class="bin">
+            <!-- Tab buttons -->
+            <div class="bin-tabs">
+                <button class="tab-btn active" data-tab="terms">Terms</button>
+                <button class="tab-btn" data-tab="computer-science">Com Sci </button>
+            </div>
+            <!-- Semester items -->
+            <div class="bin-content active" id="terms">
+                <div class="bin-item semester spring" data-title="Spring 1">Spring 1</div>
+                <div class="bin-item semester spring" data-title="Spring 2">Spring 2</div>
+                <div class="bin-item semester summer" data-title="Summer 1">Summer 1</div>
+                <div class="bin-item semester summer" data-title="Summer 2">Summer 2</div>
+                <div class="bin-item semester fall" data-title="Fall 1">Fall 1</div>
+                <div class="bin-item semester fall" data-title="Fall 2">Fall 2</div>
+            </div>
+
+            <!-- Course items -->
+            <div class="bin-content" id="courses">
+                <div class="bin-item course" data-title="COM-203">COM 203 - Computer Systems</div>
+                <div class="bin-item course" data-title="COM-207">COM 207 - Programming in C/C++</div>
+            <div class="bin-item course" data-title="COM-209">COM 209 - Programming in Java</div>
+            <div class="bin-item course" data-title="COM-212">COM 212 - System Administration</div>
+            <div class="bin-item course" data-title="COM-217">COM 217 - Theoretical Foundations of Computer Science</div>
+            <div class="bin-item course" data-title="COM-301">COM 301 - Algorithms and Data Structures</div>
+            <div class="bin-item course" data-title="COM-309">COM 309 - Network Theory and Design</div>
+            <div class="bin-item course" data-title="COM-312">COM 312 - Computer Architecture</div>
+            <div class="bin-item course" data-title="COM-330">COM 330 - Database Concepts and Programming</div>
+            <div class="bin-item course" data-title="COM-340">COM 340 - Introduction to Internet Applications</div>
+            <div class="bin-item course" data-title="COM-405">COM 405 - Operating Systems</div>
+            <div class="bin-item course" data-title="COM-416">COM 416 - Introduction to Information Security</div>
+            <div class="bin-item course" data-title="COM-430">COM 430 - Software Engineering</div>
+            <div class="bin-item course" data-title="COM-465">COM 465 - Artificial Intelligence</div>
+            <div class="bin-item course" data-title="COM-497">COM 497 - Computer Science Capstone</div>
+            <div class="bin-item course math" data-title="MAT-151">MAT 151 - College Algebra</div>
+            <div class="bin-item course math" data-title="MAT-152">MAT 152 - Trigonometry</div>
+            <div class="bin-item course math" data-title="MAT-201">MAT 201 - Introduction to Statistics</div>
+            <div class="bin-item course math" data-title="MAT-235">MAT 235 - Calculus-with Analytic Geometry I</div>
+            </div>
+        </div>
+
+
+        <script src="DragnDropSLU.js"></script>
+    </body>
+</html>

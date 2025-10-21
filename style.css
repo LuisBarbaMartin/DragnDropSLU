@@ -1,0 +1,164 @@
+.app-container {
+    /* TODO change BG color */
+    background-color: #fff; /* Placeholder color */
+    width: clamp(360px, 88vw, 1100px);
+    margin: 24px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+#workspace { 
+  position: relative;
+  min-height: calc(100vh - 220px); /* subtract dock height + margins */
+  overflow: auto;
+}
+#addBoxContainer {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 210px;
+  z-index: 1500;
+  background: rgba(255,255,255,0.95);
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+#float-box{
+    height: 20px;
+    aspect-ratio: 3/1;
+}
+
+.draggable {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  width: 200px;
+  top: 100px;
+  left: 50px;
+}
+
+/* Semester-specific themes */
+.draggable.spring .drag-header {
+  background-color: #4CAF50; /* Fresh green for Spring */
+}
+
+.draggable.summer .drag-header {
+  background-color: #FF9800; /* Warm orange for Summer */
+}
+
+.draggable.fall .drag-header {
+  background-color: #795548; /* Rich brown for Fall */
+}
+
+/* Subject-specific themes */
+.draggable.math .drag-header {
+  background-color: #ff3333; /* Bright red for Math courses */
+}
+
+.drag-header {
+  padding: 10px;
+  cursor: move;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  color: #ff6666;
+}
+
+  .bin-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 0 12px;
+    border-bottom: 1px solid #dee2e6;
+    background: #f8f9fa;
+}
+
+.tab-btn {
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    color: #666;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    background: #e9ecef;
+    color: #333;
+}
+
+.tab-btn.active {
+    background: #fff;
+    color: #2196F3;
+    font-weight: 500;
+}
+
+.bin-content {
+    display: none;
+    padding: 12px;
+    gap: 12px;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 150px;
+    align-content: flex-start;
+}
+
+.bin-content.active {
+    display: flex;
+}
+
+.bin {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #dee2e6;
+    z-index: 1000;
+  }
+
+  .bin-item {
+    height: 48px;
+    min-width: 200px;
+    max-width: 300px;
+    padding: 0 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2196F3;
+    color: white;
+    border-radius: 6px;
+    cursor: move;
+    user-select: none;
+    transition: background-color 0.2s, transform 0.08s;
+    font-size: 15px;
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bin-item:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+  }
